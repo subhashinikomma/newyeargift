@@ -1,0 +1,36 @@
+class Newyeargift {
+public void display() {
+System.out.println("Newyeargift");
+}
+}
+class Surprise extends Newyeargift {
+public void display() {
+System.out.println("Surprise");
+}
+public int add(int w, int q) {
+return w+q;
+}
+public double add(double w, double q) {
+return w+q;
+}
+}
+abstract class Sweets {
+public abstract void celebrate();
+}
+class Chocolates extends Sweets{
+public void celebrate(){
+System.out.println("\ncelebrations");
+}
+}
+class MainClass {
+public static void main(String[] args) {
+Newyeargift a=new Newyeargift();
+a.display();
+Surprise b=new Surprise();
+b.display();
+System.out.println(b.add(4,2));
+System.out.println(b.add(5.,2.)); //polymorphism
+Sweets test = new Chocolates();
+test.celebrate();
+}
+}
